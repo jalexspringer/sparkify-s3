@@ -82,7 +82,7 @@ def process_log_data(spark, input_data, output_data):
                    .withColumn('weekday', dayofweek(df.start_time))
 
     time_table.write.mode('overwrite') \
-               .partitionBy('gender') \
+               .partitionBy('year', 'month') \
                .parquet(output_data + 'time.parquet')
 
     # read in song data to use for songplays table
@@ -114,7 +114,7 @@ def main():
     os.environ['AWS_SECRET_ACCESS_KEY']=config['AWS_SECRET_ACCESS_KEY']
 
     spark = create_spark_session()
-    
+
     input_data = config['INPUT']
     output_data = config['OUTPUT']
 
