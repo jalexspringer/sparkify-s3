@@ -1,8 +1,8 @@
 # App Specific
-transactions/
-pubs.json
-.vscode
-*.toml
+*.cfg
+data/
+*.ipynb
+settings.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
