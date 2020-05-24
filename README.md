@@ -57,3 +57,10 @@ In either AWS console or via the AWS CLI, create:
 3. Create running Spark cluster, locally accessible (see docker-compose up to auto-create a local cluster on spark-network)
 4. Run python etl.py (alternately submit to spark)
    
+
+## Example Config File
+
+    AWS_ACCESS_KEY_ID=''
+    AWS_SECRET_ACCESS_KEY=''
+    INPUT='location of song and log files'
+    OUTPUT='location to write processed parquet files'
