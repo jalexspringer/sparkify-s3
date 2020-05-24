@@ -57,6 +57,9 @@ In either AWS console or via the AWS CLI, create:
 3. Create running Spark cluster, locally accessible (see docker-compose up to auto-create a local cluster on spark-network)
 4. Run python etl.py (alternately submit to spark)
    
+If running docker, use the following to start a local cluster with an attached Jupyter Notebook:
+    
+    docker-compose up --scale spark-worker=3 && docker-compose rm -fsv
 
 ## Example Config File
 
